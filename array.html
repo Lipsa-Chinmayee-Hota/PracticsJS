@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     </head>
+
+<body>
+<script>
+	//Take an array
+	let arr = [1,2,3,4,5,6,7];//ans=51.5
+	let arrSorted = arr.sort();
+	//check if the number of elements are odd or even
+	let arrLength = arr.length;
+
+	//pass the function median()
+	median(arrSorted,arrLength);
+
+	function median(arrSorted,arrLength){
+		let mid;
+		let mid2;
+		//if odd then return to onr middle element
+		//if even then return to two middle element
+		if(arrLength%2!=0){
+			mid = ((arrLength+1)/2);
+			alert("So median is : " +arrSorted[mid-1]);
+
+		}else{
+			mid = ((arr.Length)/2);
+			mid2 = mid+1;
+			let median = ((arrSorted[mid-1]+arrSorted[mid2-1])/2);
+			alert ("The median is : "+median);
+		}
+	}
+</script>
+</body>
+</html>

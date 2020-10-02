@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+</head>
+<body>
+<script>
+	//Make  a list of right and wrongs
+	let rightAnswers = 0;
+	let wrongAnswers = 0;
+
+	//Make 5 equation
+	for(let index = 0; index < 5; index++){
+		//Take 3 random varibales
+		let ranVar1 = Math.floor(Math.random() * 21) - 10;
+		let ranVar2 = Math.floor(Math.random() * 21) - 10;
+		let ranVar3 = Math.floor(Math.random() * 21) - 10;
+
+		//Make 2 random operands
+		let operands = ["+", "-", "*", "%"];
+		let lengthOfOperands = operands.length;
+		let operandSelector1 = operands[Math.floor(Math.random() * lengthOfOperands)];
+		let operandSelector2 = operands[Math.floor(Math.random() * lengthOfOperands)];
+
+		//Make an Mathematical equation
+		let equation = ("(" + ranVar1 + ")" + operandSelector1 +
+			"(" + ranVar2 + ")" + operandSelector2 +
+			"(" + ranVar3 + ")");  
+		
+
+			//Evaluate the equation
+			let answers = eval(equation);
+			//Let users input the solution
+			let userAnswer = prompt("Please enter your response for the given problem : " + equation)
+			if (answers == userAnswer) {
+				rightAnswers++;
+			}
+			else wrongAnswers++;
+
+		}
+		alert("Total number of right answers are :" + rightAnswers +"\n"+ "Total number of wrong answers are : " + wrongAnswers);
+	</script>
+</body>
+</html>
+
+
+
+
+
+
+
+            
+
+
+
+

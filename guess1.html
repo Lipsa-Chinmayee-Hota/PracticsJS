@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="utf-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Guess the Number</title>
+</head>
+<body>
+     <script>
+          var thinkingOf;//Number the computer has choosen (1 through 1000)
+          var guess;  //User's latest guess
+          //Initialize the computer's number
+               
+           thinkingOf = Math.ceil(Math.random()*1000);
+           //play until user guesses the number
+          
+          guess = window.prompt("I am thinking of a number between 1 to 1000." + "What is it?", "");
+          while (guess !=thinkingOf)
+          {
+               if (guess < thinkingOf) {
+                    guess = window.prompt("Your guess of " + guess+  "was too low. Guess again.", "");
+
+               }
+               else {
+                    guess = window.prompt("Your guess of "  + guess+  "was too high. Guess again.", "");
+               }
+          }
+          //game over; congratulate the use
+          window.alert(guess + "is correct!");
+
+          </script>
+     </body>
+     </html>
+
+
+     
